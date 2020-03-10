@@ -2,16 +2,16 @@
  * Combinational Logic - Part 2
  * Group Memebers: Anon Laosirilurchakai, Peter Glass, Brianne Mclemore, Grayson Ayres, Marco Myers, Alex Ni
  * 
- * Description: Our project for this semester is to create an arithmetic logic unit (ALU) using a 
- * virtual hardware design language. The ALU will be capable of doing math functions (add, subtract, 
- * multiply, divide, modulus), logic functions (and, or, xor, not, nand, nor, xnor), support functions 
- * (no operation, shift left, shift right, reset, clear) and be able to catch errors (divide by zero, 
- * overflow). The ALU will also have the additional ability to store the first and second inputs, 
- * store the result of an operation and use the result of an operation as an input. The ALU will 
- * accept up to a 16-bit integer as input and the output will support 32-bits.
+ * Description: Our project for this semester is to create an arithmetic logic unit (ALU) using a virtual 
+ * hardware design language. The ALU will be capable of doing math functions (add, subtract, multiply, divide, 
+ * modulus), logic functions (and, or, xor, not, nand, nor, xnor), support functions (no operation, shift left, 
+ * shift right, reset, clear) and be able to catch errors (divide by zero, overflow). The ALU will also have 
+ * the additional ability to store the first and second inputs, store the result of an operation and use the 
+ * result of an operation as an input. The ALU will accept up to a 16-bit integer as input and the output will 
+ * support 32-bits.
  *
- * Module List: Half Adder, Full Adder, Subtractor, Multiplier, Multiplexor, Left Arbiter, Right
- * Arbiter, Encoder, Decoder
+ * Module List: Half Adder, Full Adder, Subtractor, Multiplier, Multiplexor, Left Arbiter, RightArbiter, 
+ * Encoder, Decoder
  *
  * The software used to compile this program is Icarus Verilog for Windows v11
  * Source: http://bleyer.org/icarus/
@@ -57,8 +57,7 @@ endmodule
 
 //=============================================
 // Right Arbitrer: 16 bit to 16 hot bit 
-// Base Code Source: Dally, WIlliam J., Harting, 
-// Curtis, R. DIgital Design, A Systems Approach, 
+// Base Code Source: Dally, WIlliam J., Harting, Curtis, R. DIgital Design, A Systems Approach, 
 // Cambridge, Cambridge University Press, 2012
 //=============================================
 module RArb(r, g);
@@ -70,8 +69,7 @@ endmodule
 
 //=============================================
 // Left Arbitrer: 16 bit to 16 hot bit 
-// Base Code Source: Dally, WIlliam J., Harting, 
-// Curtis, R. DIgital Design, A Systems Approach, 
+// Base Code Source: Dally, WIlliam J., Harting, Curtis, R. DIgital Design, A Systems Approach, 
 // Cambridge, Cambridge University Press, 2012
 //=============================================
 module LArb(r, g);
