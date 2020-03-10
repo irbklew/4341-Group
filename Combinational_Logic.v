@@ -1,6 +1,6 @@
 /**
  * Combinational Logic - Part 2
- * Group Memebers: Anon Laosirilurchakai, Peter Glass, Brianne Mclemore, Grayson Ayres, Marco Myers
+ * Group Memebers: Anon Laosirilurchakai, Peter Glass, Brianne Mclemore, Grayson Ayres, Marco Myers, Alex Ni
  * 
  * Description: Our project for this semester is to create an arithmetic logic unit (ALU) using a 
  * virtual hardware design language. The ALU will be capable of doing math functions (add, subtract, 
