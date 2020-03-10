@@ -63,6 +63,7 @@ module LArb(r, g);
 endmodule
 
 module testbench();
+
 	reg [3:0] dIn;
 	reg [15:0] eIn, laIn, raIn;
 	wire [15:0] dOut, laOut, raOut;
