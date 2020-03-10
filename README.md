@@ -13,7 +13,7 @@ $git commit -m "commit"
 $git push
 ```
 
-To keep up to date with everyone's elses changes you need to do the following command:
+To keep up to date with everyone's elses changes you need to do the following command periodically:
 ```
 $git pull
 ```
