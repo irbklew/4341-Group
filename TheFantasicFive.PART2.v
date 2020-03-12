@@ -10,7 +10,7 @@
  * result of an operation as an input. The ALU will accept up to a 16-bit integer as input and the output will 
  * support 32-bits.
  *
- * Module List: Half Adder, Full Adder, Subtractor, Multiplier, Multiplexor, Left Arbiter, RightArbiter, 
+ * Module List: Half Adder, Full Adder, Adder/Subtractor, Multiplier, Multiplexor, Left Arbiter, RightArbiter, 
  * Encoder, Decoder
  *
  * The software used to compile this program is Icarus Verilog for Windows v11
@@ -89,11 +89,11 @@ module Mux8(a7, a6, a5, a4, a3, a2, a1, a0, s, b) ;
   input [7:0] s; //one-hot select
   output[k-1:0] b;
   assign b = 	({k{s[7]}} & a7) |
-				({k{s[6]}} & a6) |
-				({k{s[5]}} & a5) |
-				({k{s[4]}} & a4) |
-				({k{s[3]}} & a3) |
-				({k{s[2]}} & a2) | 
+		({k{s[6]}} & a6) |
+		({k{s[5]}} & a5) |
+		({k{s[4]}} & a4) |
+		({k{s[3]}} & a3) |
+		({k{s[2]}} & a2) | 
                 ({k{s[1]}} & a1) |
                 ({k{s[0]}} & a0);
 endmodule
@@ -114,9 +114,9 @@ module Enc16(a, b);
 	input [15:0] a;
 	output [3:0] b;
 	assign b = {a[8] | a[9] | a[10] | a[11] | a[12] | a[13] | a[14] | a[15],
-				a[4] | a[5] | a[6]  | a[7]  | a[12] | a[13] | a[14] | a[15],
-				a[2] | a[3] | a[6]  | a[7]  | a[10] | a[11] | a[14] | a[15],
-				a[1] | a[3] | a[5]  | a[7]  | a[9]  | a[11] | a[13] | a[15]}; 
+		    a[4] | a[5] | a[6]  | a[7]  | a[12] | a[13] | a[14] | a[15],
+		    a[2] | a[3] | a[6]  | a[7]  | a[10] | a[11] | a[14] | a[15],
+		    a[1] | a[3] | a[5]  | a[7]  | a[9]  | a[11] | a[13] | a[15]}; 
 endmodule
 
 //=============================================
