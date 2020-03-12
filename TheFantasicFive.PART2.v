@@ -81,21 +81,35 @@ module nor16 (a, b, f);
 endmodule
 
 //=============================================
-// Mux8: 8 channel, 16 bit multiplexer
+// MUX: 16 channel, 16 bit multiplexer
 //=============================================
-module Mux8(a7, a6, a5, a4, a3, a2, a1, a0, s, b) ;
-  parameter k = 16; //channel bit size
-  input [k-1:0] a7, a6, a5, a4, a3, a2, a1, a0;
-  input [7:0] s; //one-hot select
-  output[k-1:0] b;
-  assign b = 	({k{s[7]}} & a7) |
-		({k{s[6]}} & a6) |
-		({k{s[5]}} & a5) |
-		({k{s[4]}} & a4) |
-		({k{s[3]}} & a3) |
-		({k{s[2]}} & a2) | 
-                ({k{s[1]}} & a1) |
-                ({k{s[0]}} & a0);
+module MUX (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, s, y);
+  parameter z = 16;
+  input [z-1:0] a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
+  input [3:0] s;
+  output [z-1:0] y;
+  reg [z-1:0] y;
+  
+  always @(*) begin
+    case(s)
+      0: y = a;
+      1: y = b;
+      2: y = c;
+      3: y = d;
+      4: y = e;
+      5: y = f;
+      6: y = g;
+      7: y = h;
+      8: y = i;
+      9: y = j;
+      10: y = k;
+      11: y = l;
+      12: y = m;
+      13: y = n;
+      14: y = o;
+      15: y = p;
+    endcase
+  end
 endmodule
 
 //=============================================
